@@ -221,6 +221,22 @@ function isPluginDisabled(
   return false
 }
 
+/**
+ *
+ *
+ *
+ *
+ *
+ * TODO: I'm trying to figure out where the plugin settings are used
+ * for Browser Actions/Plugins.
+ *
+ * It appears that they would be part of the "load" function, which
+ * gets created here I think. Or at least this is where I am right now.
+ *
+ * Answer: This just loads the script, but the script is built to include
+ * @segment/browser-destination-runtime which is the code that loads all
+ * the action/plugin settings and subscriptions.
+ */
 async function loadPluginFactory(
   remotePlugin: RemotePlugin,
   obfuscate?: boolean
